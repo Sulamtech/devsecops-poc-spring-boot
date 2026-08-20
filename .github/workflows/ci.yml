@@ -18,14 +18,14 @@ jobs:
     name: integrity
     permissions:
       contents: read
-    uses: Sulamtech/devsecops-poc-workflows/.github/workflows/reusable-caller-integrity.yml@e566ea21905b16278f56601b0dd79f8b5478cf31 # caller integrity detector
+    uses: Sulamtech/devsecops-poc-workflows/.github/workflows/reusable-caller-integrity.yml@469a9156175acccf696e938c7aca9dad3fcc3c69 # caller integrity detector
 
   tests:
     name: tests
     needs: integrity
     permissions:
       contents: read
-    uses: Sulamtech/devsecops-poc-workflows/.github/workflows/reusable-maven-ci.yml@e566ea21905b16278f56601b0dd79f8b5478cf31 # poc-v1.1.0
+    uses: Sulamtech/devsecops-poc-workflows/.github/workflows/reusable-maven-ci.yml@469a9156175acccf696e938c7aca9dad3fcc3c69 # poc-v1.1.0
     with:
       java-version: "21"
 
@@ -36,6 +36,6 @@ jobs:
       contents: read
       pull-requests: read
       id-token: write
-    uses: Sulamtech/devsecops-poc-workflows/.github/workflows/reusable-security.yml@e566ea21905b16278f56601b0dd79f8b5478cf31 # poc-v1.1.1
+    uses: Sulamtech/devsecops-poc-workflows/.github/workflows/reusable-security.yml@469a9156175acccf696e938c7aca9dad3fcc3c69 # poc-v1.1.1
     with:
       image-name: devsecops-poc-spring-boot
