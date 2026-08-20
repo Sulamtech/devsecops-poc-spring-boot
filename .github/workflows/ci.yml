@@ -22,6 +22,7 @@ jobs:
 
   tests:
     name: tests
+    needs: integrity
     permissions:
       contents: read
     uses: Sulamtech/devsecops-poc-workflows/.github/workflows/reusable-maven-ci.yml@e566ea21905b16278f56601b0dd79f8b5478cf31 # poc-v1.1.0
@@ -30,6 +31,7 @@ jobs:
 
   security:
     name: security
+    needs: integrity
     permissions:
       contents: read
       pull-requests: read
