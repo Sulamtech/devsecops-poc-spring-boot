@@ -1,0 +1,3 @@
+# KAN-118 approved inherited vulnerability baseline.
+# One CVE per line. Keep reason, owner and review date in adjacent comments.
+# Empty by design: the current validated runtime has no actionable CRITICAL/HIGH debt.
